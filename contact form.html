@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body {
+ background-image: url("https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60.jpg");
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+
+form{
+  margin-left:20%;
+  
+  width :55%;
+  background-color: #f2f2f2;
+}
+</style>
+<body>
+    <script>
+        function validateForm() {
+                  var a = document.forms["myForm"]["fname"].value;
+                  var b = document.forms["myForm"]["lname"].value;
+                  var c = document.forms["myForm"]["gender"].value;
+                  var d = document.forms["myForm"]["state"].value;
+                  var e = document.forms["myForm"]["phone"].value;
+                  var f = document.forms["myForm"]["email"].value;
+                  var g = document.forms["myForm"]["alumni"].value;
+                  var h = document.forms["myForm"]["address"].value;
+                 
+
+                  if (a == "") {
+                     alert("Name must be filled out");
+                     return false;
+                     } 
+                  
+                  if (b == "") {
+                     alert("Last Name must be filled out");
+                     return false;
+                     } 
+                  if (c == "") {
+                     alert("Gender must be selected");
+                     return false;
+                     } 
+                  if (d == "") {
+                     alert("State must be selected");
+                     return false;
+                     } 
+                  if (e == "") {
+                     alert("Phone Number must be filled out");
+                     return false;
+                     } 
+                  if (f== "") {
+                     alert("Email must be filled out");
+                     return false;
+                     } 
+                  if (g == "") {
+                     alert("AlumniId must be filled out");
+                     return false;
+                     } 
+                  
+                  if (h == "") {
+                     alert("Address must be filled out");
+                     return false;
+                     } 
+                  
+                  
+                     
+                     
+                     
+}
+    </script>  
+<center><h3>please fill out the details</h3></center>
+
+
+<div>
+  <form name="myForm" onsubmit="return validateForm()">
+    <br>
+    <center><label for="fname"> Name</label></center>
+    <br>
+    <center><input type="text" id="fname" name="firstname" placeholder="Enter your First  Name"></center>
+    <br>
+    <center><label for="lname">Last Name</label></center>
+    <br>
+  <center><input type="text" id="lname" name="lastname" placeholder="Enter the Last Name"></center>
+     <br>
+    <center><label for="country">Gender</label></center>
+    <br>
+  <center> <select id="gender" name="gender">
+      <option value=""name="gender"id="gender">Select</option>
+      <option value="australia"name="gender">Male</option>
+      <option value="canada"name="gender">Female</option>
+      <option value="usa"name="gender">Others</option>
+    </select></center>
+    <br>
+    <center><label for="state">State</label></center>
+    <br>
+  <center> <select id="state" name="state">
+      <option value=""name="state">Select</option>
+      <option value="Andhrapradesh"name="gender">Andhrapradesh</option>
+      <option value="Tamil Nadu"name="gender">Tamil Nadu</option>
+      <option value="Karnataka"name="gender">Karanataka</option>
+      <option value="Kerala"name="gender">Kerala</option>
+      <option value="Telangana"name="gender">Telangana</option>
+    </select></center>
+    <br>
+  <center><label for="phone">Phone Number</label></center>
+    <br>
+  <center><input type="text" maxlength="10" id="phone" name="phone" placeholder="Enter the Phone Number"></center>
+    <br>
+    <center><label for="email">Email</label></center>
+    <br>
+    <center><input type="text"  id="email" name="email" placeholder="Enter the Email Id"></center>
+    <br>
+    <center><label for="alumni">Alumni Id</label></center>
+    <br>
+    <center><input type="text"  id="alumni" name="alumni" placeholder="Enter the Alumni Id"></center>
+    <br>
+     <center>Current Address</center>
+     <br>
+     <center><textarea cols="90" rows="5" name="address" placeholder="Current Address" value="address">
+</textarea> </center>
+<center>Message </center>
+<br>
+<center><textarea cols="90" rows="5" name="address" placeholder="please leave a message " value="address">
+</textarea> </center>
+
+ 
+    
+    <center><input type="submit" value="Submit"></center>
+  </form>
+</div>
+
+</body>
+</html>
