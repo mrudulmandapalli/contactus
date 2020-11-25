@@ -11,6 +11,16 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+input[type=number], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 body {
  background-image: url("https://images.unsplash.com/photo-1596524430615-b46475ddff6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60.jpg");
 }
@@ -41,7 +51,7 @@ form{
     <script>
         function validateForm() {
                   var a = document.forms["myForm"]["fname"].value;
-                  var b = document.forms["myForm"]["lname"].value;
+                  var b = document.forms["myForm"]["message"].value;
                   var c = document.forms["myForm"]["gender"].value;
                   var d = document.forms["myForm"]["state"].value;
                   var e = document.forms["myForm"]["phone"].value;
@@ -96,6 +106,8 @@ form{
 
 <div>
   <form name="myForm" onsubmit="return validateForm()">
+    <form action="connect.jsp" method="post">
+   
     <br>
     <center><label for="fname"> Name</label></center>
     <br>
@@ -107,29 +119,29 @@ form{
     <br>
   <center> <select id="gender" name="gender">
       <option value=""name="gender"id="gender">Select</option>
-      <option value="australia"name="gender">Male</option>
-      <option value="canada"name="gender">Female</option>
-      <option value="usa"name="gender">Others</option>
+      <option value="m"name="gender">Male</option>
+      <option value="f"name="gender">Female</option>
+      <option value="o"name="gender">Others</option>
     </select></center>
     <br>
     <center><label for="state">State</label></center>
     <br>
   <center> <select id="state" name="state">
       <option value=""name="state">Select</option>
-      <option value="Andhrapradesh"name="gender">Andhrapradesh</option>
-      <option value="Tamil Nadu"name="gender">Tamil Nadu</option>
-      <option value="Karnataka"name="gender">Karanataka</option>
-      <option value="Kerala"name="gender">Kerala</option>
-      <option value="Telangana"name="gender">Telangana</option>
+      <option value="AP"name="state">Andhrapradesh</option>
+      <option value="TN"name="state">Tamil Nadu</option>
+      <option value="KA"name="state">Karanataka</option>
+      <option value="KE"name="state">Kerala</option>
+      <option value="TE"name="state">Telangana</option>
     </select></center>
     <br>
   <center><label for="phone">Phone Number</label></center>
     <br>
-  <center><input type="text" maxlength="10" id="phone" name="phone" pattern="[0-9]" placeholder="Enter the Phone Number"></center>
+  <center><input type="number" maxlength="10" id="phone" name="phone" placeholder="Enter the Phone Number"></center>
     <br>
     <center><label for="email">Email</label></center>
     <br>
-    <center><input type="text"  id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter the Email Id"></center>
+    <center><input type="text"  id="email" name="email" placeholder="Enter the Email Id"></center>
     <br>
     <center><label for="alumni">Alumni Id</label></center>
     <br>
@@ -141,12 +153,13 @@ form{
 </textarea> </center>
 <center>Message </center>
 <br>
-<center><textarea cols="90" rows="5" name="lname" placeholder="please leave a message " value="lname">
+<center><textarea cols="90" rows="5" name="message" placeholder="please leave a message " value="message">
 </textarea> </center>
 
- 
+  
     
     <center><input type="submit" value="Submit"></center>
+  </form>
   </form>
 </div>
 
